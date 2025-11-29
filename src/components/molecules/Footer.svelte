@@ -8,7 +8,7 @@
 <footer class="wrapper">
 	<Socials />
 	<h6>
-	Licensed by Zerox
+	develops by @returnnear
 		<Tooltip tip="how to delete">
 			<a href="" target="_blank" rel="noreferrer"></a>
 		</Tooltip>

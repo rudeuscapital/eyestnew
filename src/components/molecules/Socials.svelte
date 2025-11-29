@@ -6,22 +6,22 @@
 
 <div class="socials-container">
 	<!-- Twitter -->
-	<Social tip="Twitter" link="https://x.com/zeroxsociety">
+	<Social tip="Twitter" link="https://x.com/agisnoweyest">
 		<TwitterIcon color="var(--accent)" size="22px" />
 	</Social>
 
 	<!-- Telegram -->
-	<Social tip="Telegram" link="https://t.me/zeroxsociety">
+	<Social tip="Telegram" link="#">
 		<TelegramIcon color="var(--accent)" size="22px" />
 	</Social>
 
 	<!-- DexScreener -->
-	<Social tip="DexScreener" link="https://pump.fun/coin/4fhC7tzR98MvosUoS1hJ4SC4mYaiyHtMri76CpYypump">
+	<Social tip="DexScreener" link="#">
 		<img src="/dexscreener.svg" alt="DexScreener" class="icon" />
 	</Social>
 
 	<!-- Whitepaper (di samping kanan) -->
-	<Social tip="Whitepaper" link="/whitepaper.pdf">
+	<Social tip="Whitepaper" link="/">
 		<img src="/whitepaper.svg" alt="Whitepaper" class="icon" />
 	</Social>
 </div>

@@ -27,7 +27,7 @@
 			</Nav>
 
 			<!-- 🖼️ Collections -->
-			<Nav href="#aw" section="collections" isSelected={currentPath === '/' && y > 675 && y < 1000}>
+			<Nav href="#aw" section="art" isSelected={currentPath === '/' && y > 675 && y < 1000}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--accent)" viewBox="0 0 24 24">
 					<path fill="none" d="M0 0h24v24H0z" />
 					<path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2
