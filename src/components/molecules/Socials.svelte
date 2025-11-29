@@ -7,8 +7,18 @@
 <div class="socials-container">
 	<!-- Twitter -->
 	<Social tip="Twitter" link="https://x.com/agisnoweyest">
-		<TwitterIcon color="var(--accent)" size="22px" />
-	</Social>
+	<svg
+		width="22"
+		height="22"
+		viewBox="0 0 24 24"
+		fill="var(--accent)"
+		xmlns="http://www.w3.org/2000/svg"
+		class="icon"
+	>
+		<path d="M18.244 2H21.5l-7.78 9.02L23 22h-7.406l-5.8-7.29L3.6 22H.333l8.327-9.67L1 2h7.594l5.243 6.63L18.244 2zM16.848 20.1h2.227L7.25 3.8H5.024l11.824 16.3z"/>
+	</svg>
+</Social>
+
 
 	<!-- DexScreener -->
 	<Social tip="DexScreener" link="#">
