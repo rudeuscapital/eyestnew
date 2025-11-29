@@ -57,12 +57,12 @@
 <svelte:head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="og:title" content="https://www.zeroxsociety.xyz/" />
+	<meta name="og:title" content="https://www.architectureofeyest.xyz/" />
 	<meta content="/default.png" property="og:image" />
 	<meta property="og:description" content="the only website ever" />
 	<meta name="twitter:image" itemprop="image" content="/default.png" />
 	<meta name="twitter:card" content="summary" />
-	<title>Zeroxsociety</title>
+	<title>agisnoweyest</title>
 </svelte:head>
 
 <svelte:window on:click={playSFX} />

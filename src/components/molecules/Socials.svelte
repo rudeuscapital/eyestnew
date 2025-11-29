@@ -10,20 +10,12 @@
 		<TwitterIcon color="var(--accent)" size="22px" />
 	</Social>
 
-	<!-- Telegram -->
-	<Social tip="Telegram" link="#">
-		<TelegramIcon color="var(--accent)" size="22px" />
-	</Social>
-
 	<!-- DexScreener -->
 	<Social tip="DexScreener" link="#">
 		<img src="/dexscreener.svg" alt="DexScreener" class="icon" />
 	</Social>
 
 	<!-- Whitepaper (di samping kanan) -->
-	<Social tip="Whitepaper" link="/">
-		<img src="/whitepaper.svg" alt="Whitepaper" class="icon" />
-	</Social>
 </div>
 
 <style>

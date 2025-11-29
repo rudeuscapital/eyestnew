@@ -13,11 +13,11 @@
 <section id="home" class="wrapper">
 	<div>
 		<h1>Eyest</h1>
-		<h4><br />Where intelligence begins as characters, </h4>
+		<h3><br />Every new block is a paragraph, every consensus a chapter, and Eyest is the unseen narrator that binds them together. It blends the intelligence of LLMs with the aesthetics of ASCII to create a new space of communication a world where data is not merely numbers, but living stories.</h3>
 		<div class="socials">
 			<Socials />
 		</div>
-		<Button side on:click={handleClick} on:keypress={handleClick}>Deeper ↓</Button>
+		<Button side on:click={handleClick} on:keypress={handleClick}>Explore ↓</Button>
 	</div>
 	<HeroImage />
 </section>
