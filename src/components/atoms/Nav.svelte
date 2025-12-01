@@ -40,7 +40,10 @@
 	button {
 		background-color: transparent;
 		border: none;
-		color: #ffffff; /* text & icons inherit white */
+
+		/* text + icon color (via currentColor) */
+		color: #ffffff;
+
 		font-size: 1rem;
 		user-select: none;
 		display: flex;
@@ -58,14 +61,6 @@
 			background-color: var(--elevation-three);
 			color: #ffffff;
 		}
-	}
-
-	/* pastikan SVG di dalam slot juga putih */
-	button :global(svg),
-	button :global(svg *) {
-		fill: #ffffff !important;
-		stroke: #ffffff !important;
-		color: #ffffff !important;
 	}
 
 	h5 {
@@ -119,7 +114,7 @@
 
 		button:hover .icon-container,
 		.selected .icon-container {
-			/* bulatan putih transparan, bukan coklat */
+			/* highlight lingkaran pakai putih transparan */
 			background-color: rgba(255, 255, 255, 0.18);
 		}
 	}

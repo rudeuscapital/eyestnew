@@ -257,6 +257,12 @@
   function selectConversation(conv: Conversation) {
     activeConversation = conv;
     output = conv.ascii;
+
+    // auto-scroll ke panel terminal (penting di mobile)
+    const el = document.querySelector(".terminal");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   async function copyToClipboard() {
@@ -268,11 +274,8 @@
 
 <main>
   <div class="layout">
-
     <aside class="sidebar">
-
-      <!-- BACK TO ROOT BUTTON -->
-      <button class="btn-back" on:click={() => window.location.href = "/"}>
+      <button class="btn-back" on:click={() => (window.location.href = "/")}>
         ← back to root
       </button>
 
@@ -293,7 +296,6 @@
     </aside>
 
     <section class="terminal">
-
       <div class="terminal-header">
         <div class="title">
           {#if activeConversation}
@@ -320,19 +322,18 @@
           </p>
         {/if}
       </div>
-
     </section>
   </div>
 </main>
 
 <style lang="scss">
-
   main {
     height: 100vh;
     background: #050505;
     color: #d0d0d0;
     font-family: "Fira Code", monospace;
     padding: 1.3rem 1.8rem;
+    box-sizing: border-box;
   }
 
   .layout {
@@ -341,7 +342,6 @@
     gap: 1.3rem;
   }
 
-  /* BACK BUTTON */
   .btn-back {
     width: 100%;
     text-align: left;
@@ -361,7 +361,6 @@
     }
   }
 
-  /* SIDEBAR */
   .sidebar {
     width: 260px;
     min-width: 220px;
@@ -425,7 +424,6 @@
     }
   }
 
-  /* TERMINAL */
   .terminal {
     flex: 1;
     display: flex;
@@ -481,21 +479,33 @@
     }
   }
 
-  @media (max-width: 800px) {
+  /* ===========================
+     MOBILE / ANDROID LAYOUT
+     =========================== */
+  @media (max-width: 900px) {
+    main {
+      height: auto;          /* biar bisa scroll panjang */
+      min-height: 100vh;
+      padding: 1rem 1rem 2.5rem;
+    }
+
     .layout {
       flex-direction: column;
+      height: auto;
     }
 
     .sidebar {
       width: 100%;
-      border-bottom: 1px solid #1a1a1a;
-      margin-bottom: 0.5rem;
+      min-width: 0;
       border-right: none;
+      border-bottom: 1px solid #1a1a1a;
+      padding-right: 0;
+      margin-bottom: 0.75rem;
     }
 
     .terminal {
       padding-left: 0;
+      min-height: 40vh;
     }
   }
-
 </style>
