@@ -40,7 +40,7 @@
 	button {
 		background-color: transparent;
 		border: none;
-		color: var(--text-secondary);
+		color: #ffffff; /* text & icons inherit white */
 		font-size: 1rem;
 		user-select: none;
 		display: flex;
@@ -51,18 +51,28 @@
 		cursor: pointer;
 		transition:
 			background-color 0.3s var(--bezier-one),
-			transform 0.3s var(--bezier-one);
+			transform 0.3s var(--bezier-one),
+			color 0.3s var(--bezier-one);
 
 		&:hover {
 			background-color: var(--elevation-three);
-			color: var(--accent);
+			color: #ffffff;
 		}
+	}
+
+	/* pastikan SVG di dalam slot juga putih */
+	button :global(svg),
+	button :global(svg *) {
+		fill: #ffffff !important;
+		stroke: #ffffff !important;
+		color: #ffffff !important;
 	}
 
 	h5 {
 		transition: color 0.3s ease, opacity 0.3s ease;
-		opacity: 0.85;
+		opacity: 0.9;
 		font-weight: 400;
+		color: #ffffff;
 	}
 
 	.icon-container {
@@ -70,7 +80,7 @@
 	}
 
 	.selected h5 {
-		color: var(--accent);
+		color: #ffffff;
 		opacity: 1;
 		font-weight: 500;
 	}
@@ -109,7 +119,8 @@
 
 		button:hover .icon-container,
 		.selected .icon-container {
-			background-color: var(--accent-opacity);
+			/* bulatan putih transparan, bukan coklat */
+			background-color: rgba(255, 255, 255, 0.18);
 		}
 	}
 </style>

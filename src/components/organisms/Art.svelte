@@ -13,8 +13,12 @@
 </section>
 
 <style lang="scss">
+
+	/* ———————————————————————
+	   FIX: “art” TITLE → PUTIH
+	   ——————————————————————— */
 	span {
-		color: var(--accent);
+		color: #ffffff !important;
 	}
 
 	h2 {
@@ -23,13 +27,13 @@
 	}
 
 	div {
-		display: flex;
-		justify-content: center;
-		margin-top: 0;
+	display: flex;
+	justify-content: center; /* CENTER DEFAULT (DESKTOP) */
+	margin-top: 0;
 
-		@media (max-width: 868px) {
-			justify-content: left;
-			margin-bottom: 0.3rem;
-		}
+	@media (max-width: 868px) {
+		justify-content: flex-start; /* MOBILE pindah ke kiri */
+		margin-bottom: 0.3rem;
 	}
+}
 </style>
