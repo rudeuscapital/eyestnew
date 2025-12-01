@@ -7,7 +7,7 @@
 <div class="socials-container">
 
 	<!-- Twitter (PUTIH) -->
-	<Social tip="Twitter" link="#">
+	<Social tip="Twitter" link="https://x.com/charlore_">
 		<svg
 			width="22"
 			height="22"

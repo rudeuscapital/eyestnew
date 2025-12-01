@@ -35,10 +35,10 @@
 		}
 
 		&:before {
-			@include outlineText($content: 'Eyest', $translateX: -40%, $translateY: -210%);
+			@include outlineText($content: 'charlore', $translateX: -40%, $translateY: -210%);
 
 			@media screen and (max-width: 868px) {
-				@include outlineText($content: 'Eyest', $translateX: -25%, $translateY: -95%);
+				@include outlineText($content: 'charlore', $translateX: -25%, $translateY: -95%);
 			}
 		}
 	}

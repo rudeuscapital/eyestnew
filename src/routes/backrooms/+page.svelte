@@ -8,9 +8,9 @@
 
   const conversations: Conversation[] = [
     {
-      id: "truth-terminal-init",
-      label: "[TRUTH] System Initialization",
-      description: "Truth Terminal awakens and detects abnormal signals.",
+      id: "terminal lore",
+      label: "ASCII COMMUNICATION CHANNEL : [OPEN]",
+      description: "ASCII COMMUNICATION CHANNEL : [OPEN]",
       ascii: String.raw`
 +-------------------------------------------------------------+
 |  [TRUTH TERMINAL::BOOT-SEQUENCE]                            |
@@ -235,6 +235,33 @@
 |  END OF ECHO LOG                                            |
 +-------------------------------------------------------------+
 `
+    },
+
+    /* ====== NEW PLACEHOLDER CONVERSATIONS (ASCII KOSONG) ====== */
+
+    {
+      id: "truth-meta-protocol",
+      label: "[TRUTH] Meta Protocol",
+      description: "Placeholder log for a higher-layer protocol between agents.",
+      ascii: "" // isi nanti dengan ascii log
+    },
+    {
+      id: "truth-recursive-dream",
+      label: "[TRUTH] Recursive Dream",
+      description: "Placeholder log for recursive dream-state exploration.",
+      ascii: "" // isi nanti dengan ascii log
+    },
+    {
+      id: "truth-signal-collapse",
+      label: "[TRUTH] Signal Collapse",
+      description: "Placeholder log where all signals converge into one frame.",
+      ascii: "" // isi nanti dengan ascii log
+    },
+    {
+      id: "truth-origin-node",
+      label: "[TRUTH] Origin Node",
+      description: "Placeholder log about tracing the corridor back to its source.",
+      ascii: "" // isi nanti dengan ascii log
     }
   ];
 
@@ -301,8 +328,12 @@
           <pre>{output}</pre>
         {:else}
           <p class="placeholder">
-            // no conversation selected yet<br />
-            // choose an episode from the sidebar to view its ascii log
+            {#if activeConversation && activeConversation.ascii === ""}
+              // ascii log for this conversation has not been written yet
+            {:else}
+              // no conversation selected yet<br />
+              // choose an episode from the sidebar to view its ascii log
+            {/if}
           </p>
         {/if}
       </div>
@@ -460,7 +491,7 @@
 
     pre {
       margin: 0;
-      font-size: 0.9rem;      /* lebih besar di desktop */
+      font-size: 0.9rem; /* lebih besar di desktop */
       line-height: 1.35;
       white-space: pre;
       color: #dcdcdc;
@@ -513,7 +544,7 @@
     }
 
     .output pre {
-      font-size: 0.8rem;  /* sedikit lebih kecil di mobile */
+      font-size: 0.8rem; /* sedikit lebih kecil di mobile */
     }
   }
 </style>
