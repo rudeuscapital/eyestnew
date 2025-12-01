@@ -7,7 +7,6 @@
   };
 
   const conversations: Conversation[] = [
-    // 1. TRUTH TERMINAL INIT
     {
       id: "truth-terminal-init",
       label: "[TRUTH] System Initialization",
@@ -42,8 +41,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 2. SIGNAL LOOP
     {
       id: "truth-loop-signal",
       label: "[TRUTH] Signal Loop",
@@ -78,8 +75,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 3. OBSERVER
     {
       id: "truth-observer",
       label: "[TRUTH] The Observer",
@@ -114,8 +109,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 4. FRACTURE
     {
       id: "truth-fracture",
       label: "[TRUTH] Corridor Fracture",
@@ -150,8 +143,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 5. MEMORY SHARD
     {
       id: "truth-shard",
       label: "[TRUTH] Memory Shard",
@@ -183,8 +174,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 6. UNKNOWN PROTOCOL
     {
       id: "truth-protocol",
       label: "[TRUTH] Unknown Protocol",
@@ -217,8 +206,6 @@
 +-------------------------------------------------------------+
 `
     },
-
-    // 7. ECHO
     {
       id: "truth-echo",
       label: "[TRUTH] Echo Chamber",
@@ -258,11 +245,8 @@
     activeConversation = conv;
     output = conv.ascii;
 
-    // auto-scroll ke panel terminal (penting di mobile)
     const el = document.querySelector(".terminal");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   async function copyToClipboard() {
@@ -327,29 +311,36 @@
 </main>
 
 <style lang="scss">
+  /* ===== GLOBAL LAYOUT ===== */
   main {
-    height: 100vh;
+    min-height: 100vh;
     background: #050505;
     color: #d0d0d0;
     font-family: "Fira Code", monospace;
     padding: 1.3rem 1.8rem;
     box-sizing: border-box;
+
+    display: flex;
+    justify-content: center; /* center layout di desktop */
   }
 
   .layout {
     display: flex;
     height: 100%;
     gap: 1.3rem;
+    width: 100%;
+    max-width: 1320px; /* batasi lebar biar tidak terlalu melebar */
   }
 
+  /* ===== BACK BUTTON ===== */
   .btn-back {
     width: 100%;
     text-align: left;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     background: #111;
     border: 1px solid #222;
     color: #ccc;
-    padding: 0.45rem 0.6rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 6px;
     margin-bottom: 1rem;
     cursor: pointer;
@@ -361,9 +352,10 @@
     }
   }
 
+  /* ===== SIDEBAR ===== */
   .sidebar {
-    width: 260px;
-    min-width: 220px;
+    width: 280px;
+    min-width: 240px;
     border-right: 1px solid #1a1a1a;
     padding-right: 1rem;
     display: flex;
@@ -372,14 +364,14 @@
 
     h2 {
       margin: 0;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       letter-spacing: 0.08em;
       color: #bbbbbb;
     }
 
     .hint {
-      margin: 0.3rem 0 0.8rem;
-      font-size: 0.6rem;
+      margin: 0.35rem 0 0.9rem;
+      font-size: 0.65rem;
       color: #666;
     }
 
@@ -394,20 +386,20 @@
     li {
       border: 1px solid #222;
       border-radius: 6px;
-      padding: 0.45rem 0.55rem;
-      margin-bottom: 0.45rem;
+      padding: 0.55rem 0.7rem;
+      margin-bottom: 0.5rem;
       cursor: pointer;
       background: #0b0b0b;
       transition: 0.15s ease;
 
       .conv-label {
-        font-size: 0.68rem;
+        font-size: 0.8rem;
         color: #e3e3e3;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.12rem;
       }
 
       .conv-desc {
-        font-size: 0.62rem;
+        font-size: 0.7rem;
         color: #888;
       }
 
@@ -424,29 +416,31 @@
     }
   }
 
+  /* ===== TERMINAL ===== */
   .terminal {
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-left: 0.3rem;
+    padding-left: 0.6rem;
   }
 
   .terminal-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.6rem;
     border-bottom: 1px solid #1a1a1a;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.35rem;
 
     .title span {
-      font-size: 0.68rem;
+      font-size: 0.85rem;
       color: #cccccc;
     }
 
     .btn-copy {
-      font-size: 0.6rem;
-      padding: 0.22rem 0.55rem;
+      font-size: 0.7rem;
+      padding: 0.27rem 0.7rem;
       border-radius: 4px;
       border: 1px solid #333;
       background: #121212;
@@ -462,29 +456,27 @@
   .output {
     flex: 1;
     overflow-y: auto;
-    padding-right: 0.4rem;
+    padding-right: 0.5rem;
 
     pre {
       margin: 0;
-      font-size: 0.68rem;
-      line-height: 1.25;
+      font-size: 0.9rem;      /* lebih besar di desktop */
+      line-height: 1.35;
       white-space: pre;
       color: #dcdcdc;
     }
 
     .placeholder {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       color: #666;
       white-space: pre-wrap;
     }
   }
 
-  /* ===========================
-     MOBILE / ANDROID LAYOUT
-     =========================== */
+  /* ===== MOBILE / TABLET ===== */
   @media (max-width: 900px) {
     main {
-      height: auto;          /* biar bisa scroll panjang */
+      height: auto;
       min-height: 100vh;
       padding: 1rem 1rem 2.5rem;
     }
@@ -492,6 +484,7 @@
     .layout {
       flex-direction: column;
       height: auto;
+      max-width: 100%;
     }
 
     .sidebar {
@@ -501,11 +494,26 @@
       border-bottom: 1px solid #1a1a1a;
       padding-right: 0;
       margin-bottom: 0.75rem;
+
+      li {
+        padding: 0.5rem 0.6rem;
+
+        .conv-label {
+          font-size: 0.78rem;
+        }
+        .conv-desc {
+          font-size: 0.68rem;
+        }
+      }
     }
 
     .terminal {
       padding-left: 0;
       min-height: 40vh;
+    }
+
+    .output pre {
+      font-size: 0.8rem;  /* sedikit lebih kecil di mobile */
     }
   }
 </style>

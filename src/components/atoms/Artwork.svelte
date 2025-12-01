@@ -36,9 +36,9 @@
 
 <svelte:head>
 	{#if clicked}
-		<title>Agisnoweyest{name}</title>
+		<title>charlore{name}</title>
 	{:else}
-		<title>Agisnoweyest</title>
+		<title>charlore</title>
 	{/if}
 </svelte:head>
 

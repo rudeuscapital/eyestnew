@@ -62,7 +62,7 @@
 	<meta property="og:description" content="the only website ever" />
 	<meta name="twitter:image" itemprop="image" content="/default.png" />
 	<meta name="twitter:card" content="summary" />
-	<title>agisnoweyest</title>
+	<title>charlore</title>
 </svelte:head>
 
 <svelte:window on:click={playSFX} />

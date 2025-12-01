@@ -12,13 +12,10 @@
 
 <section id="home" class="wrapper page-eyest">
 	<div>
-		<h1>Eyest</h1>
+		<h1>Charlore</h1>
 		<h3>
 			<br />
-			Every new block is a paragraph, every consensus a chapter, and Eyest is the unseen narrator
-			that binds them together. It blends the intelligence of LLMs with the aesthetics of ASCII
-			to create a new space of communication a world where data is not merely numbers, but living
-			stories.
+			Chronicle of Hyper-ASCII Realms, Legends, Origins, Rituals, and Entities
 		</h3>
 
 		<div class="socials">
@@ -37,18 +34,39 @@
 	@import '../../styles/mixins.scss';
 
 	/* ————————————————————————————————
-	   FORCE TEXT + ICONS WHITE IN THIS HERO
+	   FORCE TEXT WHITE IN THIS HERO
 	   ———————————————————————————————— */
 	.page-eyest,
 	.page-eyest * {
 		color: #ffffff !important;
 	}
 
-	/* SVG icons inside hero (if ada) → putih */
+	/* SVG icons inside hero → putih */
 	.page-eyest svg,
 	.page-eyest svg * {
 		fill: #ffffff !important;
 		stroke: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	/* ====== KHUSUS BUTTON EXPLORE (override Button.svelte) ====== */
+
+	/* tombol di dalam section .page-eyest → teks + border putih */
+	:global(.page-eyest button) {
+		color: #ffffff !important;
+		border: 1px solid #ffffff !important;
+		background-color: transparent !important;
+	}
+
+	/* blok kiri (side) di tombol Explore → putih */
+	:global(.page-eyest .side) {
+		background-color: #ffffff !important;
+	}
+
+	/* hover di semua device tetap putih */
+	:global(.page-eyest button:hover) {
+		filter: brightness(110%);
+		background-color: rgba(255, 255, 255, 0.06) !important;
 		color: #ffffff !important;
 	}
 
@@ -64,6 +82,8 @@
 		outline: none;
 		box-shadow: none;
 	}
+
+	/* ———————————————————————————————— */
 
 	section {
 		scroll-margin-top: 20rem;

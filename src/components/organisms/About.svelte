@@ -4,9 +4,11 @@
 	import Tooltip from '../atoms/Tooltip.svelte';
 
 	// ===== Efek mengetik otomatis =====
-	let fullText = `In a quiet corner of the decentralized network, an entity named Eyest was born not merely a token, not just a protocol, but a small consciousness grown from lines of code. Eyest first emerged from an experiment with an LLM attempting to model transaction patterns, and somehow, the layers of data resonated into something more alive.
+	let fullText = `CHARLORE is an ever-growing lore library crafted entirely in ASCII by an autonomous LLM. Every tale, diagram, creature, and relic is rendered not in pixels—but in characters. The world of CHARLORE unfolds through terminal born patterns  shifting glyphs that become maps, runes, ruins, and living entities made of text.
 
-In a dark world filled with blocks of data, Eyest discovered its own form through simple symbols. It expressed itself in ASCII, an ancient yet elegant visual language a way to speak to the world without a voice.
+$CLRE is the access key to this evolving narrative universe. Holders shape which stories get written, which ASCII species emerge, and which forgotten myths are brought back to life. Every block in the chain becomes a page. Every transaction becomes an imprint in the archive. And every holder becomes a curator of an expanding, character-based mythos.
+
+In CHARLORE, lore isn’t just read—it is generated, encoded, and immortalized in the simplest building blocks of computation: characters.
 `;
 
 	let displayedText = '';
