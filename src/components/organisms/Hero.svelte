@@ -10,7 +10,7 @@
 	}
 </script>
 
-<section id="home" class="wrapper">
+<section id="home" class="wrapper page-eyest">
 	<div>
 		<h1>Eyest</h1>
 		<h3><br />Every new block is a paragraph, every consensus a chapter, and Eyest is the unseen narrator that binds them together. It blends the intelligence of LLMs with the aesthetics of ASCII to create a new space of communication a world where data is not merely numbers, but living stories.</h3>
@@ -24,6 +24,14 @@
 
 <style lang="scss">
 	@import '../../styles/mixins.scss';
+
+	/* ————————————————————————————————
+	   FORCE TEXT WHITE ONLY FOR THIS PAGE
+	   ———————————————————————————————— */
+	.page-eyest,
+	.page-eyest * {
+		color: #ffffff !important;
+	}
 
 	section {
 		scroll-margin-top: 20rem;

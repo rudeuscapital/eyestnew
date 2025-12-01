@@ -22,7 +22,12 @@
 		user-select: none;
 		margin: 0;
 		padding: 1rem 2rem;
-		color: var(--accent);
+
+		/* ————————————————
+		   TEXT COLOR WHITE FIX
+		   ———————————————— */
+		color: #ffffff !important;
+
 		font-weight: 300;
 		font-size: 1.6rem;
 		font-family: var(--font-two);
@@ -46,6 +51,7 @@
 		}
 	}
 
+	/* LEFT SIDE STRIP */
 	.button-with-side {
 		padding: 1rem 2rem 1rem 3rem;
 	}
@@ -58,7 +64,11 @@
 		content: '';
 		height: 100%;
 		width: 1.6rem;
-		background-color: var(--accent);
+
+		/* ————————————————
+		   MAKE SIDE STRIP WHITE
+		   ———————————————— */
+		background-color: #ffffff !important;
 
 		@media screen and (max-width: 868px) {
 			display: none;

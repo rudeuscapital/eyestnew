@@ -11,7 +11,7 @@ In a dark world filled with blocks of data, Eyest discovered its own form throug
 
 	let displayedText = '';
 	let index = 0;
-	let typingSpeed = 25; // kecepatan mengetik (ms per huruf)
+	let typingSpeed = 25;
 
 	function typeWriter() {
 		if (index < fullText.length) {
@@ -52,8 +52,6 @@ In a dark world filled with blocks of data, Eyest discovered its own form throug
 			{displayedText}
 		</p>
 
-		<!-- contoh tambahan: umur real-time -->
-		
 	</div>
 </section>
 
@@ -73,17 +71,21 @@ In a dark world filled with blocks of data, Eyest discovered its own form throug
 		line-height: 1.75rem;
 	}
 
+	/* ============================== */
+	/*       TYPING TEXT — WHITE     */
+	/* ============================== */
 	.typing {
 		font-family: var(--font-two);
-		white-space: pre-line; /* biar tetap ada baris baru */
-		border-right: 2px solid var(--accent);
-		animation: blink 0.75s step-end infinite;
+		white-space: pre-line;
 		font-size: 0.95rem;
-	}
 
-	.age {
-		margin-top: 1rem;
-		color: var(--text-secondary);
+		/* TEXT → PURE WHITE */
+		color: #ffffff !important;
+
+		/* CARET → PURE WHITE */
+		border-right: 2px solid #ffffff;
+
+		animation: blink 0.75s step-end infinite;
 	}
 
 	@keyframes blink {
@@ -91,7 +93,7 @@ In a dark world filled with blocks of data, Eyest discovered its own form throug
 			border-color: transparent;
 		}
 		50% {
-			border-color: var(--accent);
+			border-color: #ffffff;
 		}
 	}
 
