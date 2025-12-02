@@ -4,7 +4,7 @@
 	import Tooltip from '../atoms/Tooltip.svelte';
 
 	// ===== Efek mengetik otomatis =====
-	let fullText = `CHARLORE is an ever-growing lore library crafted entirely in ASCII by an autonomous LLM. Every tale, diagram, creature, and relic is rendered not in pixels—but in characters. The world of CHARLORE unfolds through terminal born patterns  shifting glyphs that become maps, runes, ruins, and living entities made of text.
+	let fullText = `CHARLORE is an ever-growing lore library crafted entirely in ASCII by an autonomous LLM. Every tale, diagram, creature, and relic is rendered not in pixels but in characters. The world of CHARLORE unfolds through terminal born patterns  shifting glyphs that become maps, runes, ruins, and living entities made of text.
 
 $CLRE is the access key to this evolving narrative universe. Holders shape which stories get written, which ASCII species emerge, and which forgotten myths are brought back to life. Every block in the chain becomes a page. Every transaction becomes an imprint in the archive. And every holder becomes a curator of an expanding, character-based mythos.
 

@@ -8,7 +8,7 @@
 
   const conversations: Conversation[] = [
     {
-      id: "terminal lore",
+      id: "terminal-lore",
       label: "ASCII COMMUNICATION CHANNEL : [OPEN]",
       description: "ASCII COMMUNICATION CHANNEL : [OPEN]",
       ascii: String.raw`
@@ -237,31 +237,30 @@
 `
     },
 
-    /* ====== NEW PLACEHOLDER CONVERSATIONS (ASCII KOSONG) ====== */
-
+    // ===== Placeholder conversations (ascii masih kosong) =====
     {
       id: "truth-meta-protocol",
       label: "[TRUTH] Meta Protocol",
       description: "Placeholder log for a higher-layer protocol between agents.",
-      ascii: "" // isi nanti dengan ascii log
+      ascii: ""
     },
     {
       id: "truth-recursive-dream",
       label: "[TRUTH] Recursive Dream",
       description: "Placeholder log for recursive dream-state exploration.",
-      ascii: "" // isi nanti dengan ascii log
+      ascii: ""
     },
     {
       id: "truth-signal-collapse",
       label: "[TRUTH] Signal Collapse",
       description: "Placeholder log where all signals converge into one frame.",
-      ascii: "" // isi nanti dengan ascii log
+      ascii: ""
     },
     {
       id: "truth-origin-node",
       label: "[TRUTH] Origin Node",
       description: "Placeholder log about tracing the corridor back to its source.",
-      ascii: "" // isi nanti dengan ascii log
+      ascii: ""
     }
   ];
 
@@ -325,16 +324,20 @@
 
       <div class="output">
         {#if output}
-          <pre>{output}</pre>
+          <div class="ascii-wrap">
+            <pre>{output}</pre>
+          </div>
         {:else}
-          <p class="placeholder">
-            {#if activeConversation && activeConversation.ascii === ""}
-              // ascii log for this conversation has not been written yet
-            {:else}
-              // no conversation selected yet<br />
-              // choose an episode from the sidebar to view its ascii log
-            {/if}
-          </p>
+          <div class="ascii-wrap">
+            <p class="placeholder">
+              {#if activeConversation && activeConversation.ascii === ''}
+                // ascii log for this conversation has not been written yet
+              {:else}
+                // no conversation selected yet<br />
+                // choose an episode from the sidebar to view its ascii log
+              {/if}
+            </p>
+          </div>
         {/if}
       </div>
     </section>
@@ -489,6 +492,12 @@
     overflow-y: auto;
     padding-right: 0.5rem;
 
+    /* batasi lebar ascii + center di panel kanan */
+    .ascii-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
     pre {
       margin: 0;
       font-size: 0.9rem; /* lebih besar di desktop */
@@ -532,6 +541,7 @@
         .conv-label {
           font-size: 0.78rem;
         }
+
         .conv-desc {
           font-size: 0.68rem;
         }
@@ -543,8 +553,14 @@
       min-height: 40vh;
     }
 
-    .output pre {
-      font-size: 0.8rem; /* sedikit lebih kecil di mobile */
+    .output {
+      .ascii-wrap {
+        max-width: 100%;
+      }
+
+      pre {
+        font-size: 0.8rem; /* sedikit lebih kecil di mobile */
+      }
     }
   }
 </style>
