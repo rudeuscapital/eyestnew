@@ -21,7 +21,7 @@
 	</Social>
 
 	<!-- DexScreener (PUTIH) -->
-	<Social tip="DexScreener" link="#">
+	<Social tip="DexScreener" link="https://pump.fun/coin/DPPDayBbJNqscnF6zFis8wY4YHinN7zuQQm2ffYqpump">
 		<img src="/dexscreener.svg" alt="DexScreener" class="icon icon-img" />
 	</Social>
 
